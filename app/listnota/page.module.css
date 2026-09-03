@@ -1,0 +1,330 @@
+/* =========================================
+   PÁGINA
+========================================= */
+
+.page {
+    min-height: calc(100vh - 78px);
+
+    padding: 65px 20px;
+
+    background: #f5f5f5;
+
+    color: #222;
+}
+
+
+/* =========================================
+   CABEÇALHO
+========================================= */
+
+.pageHeader {
+    width: min(1200px, 100%);
+
+    margin: 0 auto 35px;
+
+    display: flex;
+
+    align-items: flex-end;
+
+    justify-content: space-between;
+
+    gap: 30px;
+}
+
+.tag {
+    display: inline-block;
+
+    margin-bottom: 12px;
+
+    color: #c8102e;
+
+    font-size: 0.75rem;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+}
+
+.pageHeader h1 {
+    margin-bottom: 10px;
+
+    color: #171717;
+
+    font-size: clamp(2.2rem, 5vw, 3.3rem);
+
+    line-height: 1.1;
+
+    font-weight: 800;
+
+    letter-spacing: -1px;
+}
+
+.pageHeader p {
+    color: #666;
+
+    font-size: 1rem;
+
+    line-height: 1.6;
+}
+
+
+/* =========================================
+   BOTÃO
+========================================= */
+
+.button {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    min-height: 48px;
+
+    padding: 0 22px;
+
+    border-radius: 6px;
+
+    background: #c8102e;
+
+    color: #ffffff;
+
+    font-size: 0.9rem;
+
+    font-weight: 700;
+
+    white-space: nowrap;
+
+    box-shadow:
+        0 7px 18px rgba(200, 16, 46, 0.18);
+
+    transition:
+        background 0.25s ease,
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.button:hover {
+    background: #a80d26;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 10px 24px rgba(200, 16, 46, 0.25);
+}
+
+
+/* =========================================
+   CARD DA TABELA
+========================================= */
+
+.tableCard {
+    width: min(1200px, 100%);
+
+    margin: 0 auto;
+
+    overflow: hidden;
+
+    background: #ffffff;
+
+    border: 1px solid #e5e5e5;
+
+    border-radius: 10px;
+
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.06);
+}
+
+
+/* =========================================
+   CABEÇALHO DA TABELA
+========================================= */
+
+.tableHeader {
+    min-height: 90px;
+
+    padding: 25px 30px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    border-bottom: 1px solid #eeeeee;
+}
+
+.tableHeader h2 {
+    margin-bottom: 5px;
+
+    color: #222;
+
+    font-size: 1.15rem;
+
+    font-weight: 800;
+}
+
+.tableHeader p {
+    color: #777;
+
+    font-size: 0.85rem;
+}
+
+
+/* =========================================
+   CONTADOR
+========================================= */
+
+.counter {
+    display: inline-flex;
+
+    align-items: center;
+
+    padding: 8px 13px;
+
+    border-radius: 20px;
+
+    background: #fce8ec;
+
+    color: #c8102e;
+
+    font-size: 0.8rem;
+
+    font-weight: 700;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================
+   TABELA
+========================================= */
+
+.tableWrapper {
+    width: 100%;
+
+    overflow-x: auto;
+}
+
+.tableWrapper table {
+    width: 100%;
+
+    min-width: 750px;
+
+    border-collapse: collapse;
+}
+
+.tableWrapper th {
+    padding: 17px 25px;
+
+    background: #c8102e;
+
+    color: #ffffff;
+
+    font-size: 0.75rem;
+
+    font-weight: 800;
+
+    text-align: left;
+
+    letter-spacing: 0.5px;
+
+    text-transform: uppercase;
+}
+
+.tableWrapper td {
+    padding: 20px 25px;
+
+    border-bottom: 1px solid #eeeeee;
+
+    color: #555;
+
+    font-size: 0.9rem;
+}
+
+.tableWrapper tbody tr {
+    transition: background 0.2s ease;
+}
+
+.tableWrapper tbody tr:hover {
+    background: #fff8f9;
+}
+
+.tableWrapper tbody tr:last-child td {
+    border-bottom: none;
+}
+
+
+/* =========================================
+   NOME DO ALUNO
+========================================= */
+
+.tableWrapper td strong {
+    color: #222;
+
+    font-weight: 700;
+}
+
+
+/* =========================================
+   NOTAS
+========================================= */
+
+.tableWrapper td:not(:first-child) {
+    color: #c8102e;
+
+    font-weight: 700;
+}
+
+
+/* =========================================
+   RESPONSIVIDADE
+========================================= */
+
+@media (max-width: 800px) {
+
+    .page {
+        padding: 50px 15px;
+    }
+
+    .pageHeader {
+        align-items: flex-start;
+
+        flex-direction: column;
+
+        gap: 20px;
+    }
+
+    .button {
+        width: 100%;
+    }
+
+    .tableHeader {
+        align-items: flex-start;
+
+        flex-direction: column;
+
+        padding: 22px;
+    }
+
+    .tableWrapper th,
+    .tableWrapper td {
+        padding: 16px 18px;
+    }
+}
+
+
+@media (max-width: 500px) {
+
+    .pageHeader h1 {
+        font-size: 2.2rem;
+    }
+
+    .tableHeader h2 {
+        font-size: 1rem;
+    }
+
+}
